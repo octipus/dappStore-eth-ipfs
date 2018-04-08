@@ -10,7 +10,7 @@ contract EcommerceStore {
 
   address owner;
 
-  struct Product { //initialize product constructor
+  struct Product { //product constructor
   uint id;
   string name;
   string category;
