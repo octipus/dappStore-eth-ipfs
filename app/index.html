@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <title>OGEO</title>
+  <meta name="description" content="List a product">
+  <meta name="keywords" content="OGEO ecommerce web store list item page">
+  <link rel="stylesheet" href="./stylesheets/styles.css">
+  <script src="./app.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+    <a class="navbar-brand" href="#"><i class="fa d-inline fa-lg fa-adjust"></i><b>  OGEO</b></a>
+    <a class="nav-link text-nowrap text-muted"><i class="fa fa-user fa-fw"></i>0x7700edddd3fc34c18fe2ab14b5345f1596d10553</a>
+    <div class="container-fluid">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar3SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list-item.html">List item</a>
+          </li>
+        </ul>
+        <a class="ml-3 btn navbar-btn btn-primary" data-target="#sign-in" data-toggle="modal">Sign in</a>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 text-center section-dark" style="background-image: url('https://images.unsplash.com/photo-1462726609895-1a4312a128d2?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=7a0c61706c17696005ba540b59e1fbe8&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80');">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-3 mb-4 text-primary">Sell items for cryptocurrency</h1>
+          <p class="lead mb-5">List the items you want to sale on the blocchain and get payd in cryptocurrency.
+            <br>Easy payments in Ethereum
+          </p>
+          <a class="btn btn-lg btn-primary mx-1" href="list-item.html">List item now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+        <h2>Categories</h2>
+        <div id="categories"></div>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <h2 class="text-center">Products To Buy</h2>
+          <div class="row">
+            <div class="row" id="product-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <p class="lead">Sign up to our newsletter for the latest news</p>
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your e-mail here"> </div>
+            <button type="submit" class="btn btn-primary ml-3">Subscribe</button>
+          </form>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-center nav-item"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x nav-item"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram fa-3x nav-item"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3 text-center">
+          <p>© Copyright 2018 Ocont01 - All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade w-100" id="sign-in" aria-hidden="true" aria-labelledby="sign-in" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">How to sign in </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+        </div>
+        <div class="modal-body">
+          <h3>OGEO is using Metamask</h3>
+          <p> You need metamask chrome extension in order to login </p>
+          <p><i class="fa fa-download fa-fw"></i> Download
+            <a href="#">Metamask plugin</a> from web store</p>
+          <p><i class="fa fa-user fa-fw"></i> Create an Ethereum Account using Metamask</p>
+          <p><i class="fa fa-key fa-fw"></i> Log in to Metamask with your Ethereum Account</p>
+          <p><i class="fa fa-info fa-fw"></i>
+            <a href="#" class="text-primary"> More information</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">I understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
