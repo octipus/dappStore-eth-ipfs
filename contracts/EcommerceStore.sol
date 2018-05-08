@@ -1,5 +1,6 @@
-pragma solidity ^0.4.13;
+pragma solidity ^0.4.21;
 
+import "contracts/Escrow.sol"; // eslint-disable-line
 contract EcommerceStore {
   enum ProductStatus { Open, Sold, Unsold }
   enum ProductCondition { New, Used }
@@ -8,6 +9,7 @@ contract EcommerceStore {
   mapping (address => mapping(uint => Product)) stores;
   mapping (uint => address) productIdInStore;
 
+  mapping (uint => address) productEscrow;
   address owner;
 
   struct Product { //product constructor
@@ -29,6 +31,12 @@ contract EcommerceStore {
     owner = msg.sender;
   }
 
+//events
+  event NewProduct(uint _productId, string _name, string _category, string _imageLink, string _descLink,
+    uint _listingStartTime, uint _listingEndTime, uint _price, uint _productCondition);
+
+  event ProductSold(uint _productId, address _buyer);
+
 //add product to store
   function addProductToStore(string _name, string _category, string _imageLink, string _descLink, uint _listingStartTime,
     uint _listingEndTime, uint _price, uint _productCondition) public {
@@ -46,4 +54,36 @@ contract EcommerceStore {
    return (product.id, product.name, product.category, product.imageLink, product.descLink, product.listingStartTime,
        product.listingEndTime, product.price, product.buyer, product.status);
   }
+
+// buy product
+  function buyProduct(uint _productId) payable public {
+    Product memory product = stores[productIdInStore[_productId]][_productId];
+    require(now < product.listingEndTime);
+    require(product.status == ProductStatus.Open);
+    require(msg.value >= product.price);
+
+    Escrow escrow = (new Escrow).value(msg.value)(_productId, msg.sender, productIdInStore[_productId], owner);
+    productEscrow[_productId] = address(escrow);
+    product.status = ProductStatus.Sold;
+    product.buyer = msg.sender;
+    stores[productIdInStore[_productId]][_productId] = product;
+  }
+
+//escrow
+  function escrowAddressForProduct(uint _productId) view public returns (address) {
+    return productEscrow[_productId];
+  }
+
+  function escrowInfo(uint _productId) view public returns (address, address, address, bool, uint, uint) {
+    return Escrow(productEscrow[_productId]).escrowInfo();
+  }
+
+  function releaseAmountToSeller(uint _productId) public {
+    Escrow(productEscrow[_productId]).releaseAmountToSeller(msg.sender);
+  }
+
+  function refundAmountToBuyer(uint _productId) public {
+    Escrow(productEscrow[_productId]).refundAmountToBuyer(msg.sender);
+  }
+
 }

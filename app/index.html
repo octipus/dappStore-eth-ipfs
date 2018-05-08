@@ -12,12 +12,19 @@
   <script src="./app.js"></script>
 </head>
 
-<body>
+<body class="h-100">
   <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
-    <a class="navbar-brand" href="#"><i class="fa d-inline fa-lg fa-adjust"></i><b>  OGEO</b></a>
-    <a class="nav-link text-nowrap text-muted"><i class="fa fa-user fa-fw"></i>0x7700edddd3fc34c18fe2ab14b5345f1596d10553</a>
+    <a class="navbar-brand" href="#">
+      <i class="fa d-inline fa-lg fa-adjust"></i>
+      <b> OGEO</b>
+    </a>
+    <a class="nav-link text-nowrap text-muted" id="eth-address">
+      <i class="fa fa-user fa-fw"></i>
+    </a>
     <div class="container-fluid">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar3SupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -25,6 +32,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listings.html">Listings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="list-item.html">List item</a>
@@ -39,26 +49,44 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-3 mb-4 text-primary">Sell items for cryptocurrency</h1>
-          <p class="lead mb-5">List the items you want to sale on the blocchain and get payd in cryptocurrency.
-            <br>Easy payments in Ethereum
-          </p>
+          <p class="lead mb-5">List the items you want to sale on the blockhain
+            <br>Easy payments in Ethereum </p>
           <a class="btn btn-lg btn-primary mx-1" href="list-item.html">List item now</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-        <h2>Categories</h2>
-        <div id="categories"></div>
+  <div class="py-5 bg-secondary bg-gradient filter-light filter-dark filter-color filter-gradient section-aquamarine">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center mb-5 text-white">Recently listed</h1>
+        </div>
       </div>
-      <div class="col-sm-10">
-        <div class="row">
-          <h2 class="text-center">Products To Buy</h2>
-          <div class="row">
-            <div class="row" id="product-list"></div>
-          </div>
+      <div class="row">
+        <div class="p-0 col-md-2 col-6">
+          <a>
+            <img src="https://images.pexels.com/photos/721168/pexels-photo-721168.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="img-fluid"> </a>
+        </div>
+        <div class="p-0 col-md-2 col-6">
+          <a href="stories.html">
+            <img class="img-fluid" src="https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"> </a>
+        </div>
+        <div class="p-0 col-md-2 col-6">
+          <a href="stories.html">
+            <img src="https://images.pexels.com/photos/1577/road-fashion-vintage-bag.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="img-fluid"> </a>
+        </div>
+        <div class="p-0 col-md-2 col-6">
+          <a href="stories.html">
+            <img src="https://images.pexels.com/photos/280248/pexels-photo-280248.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="img-fluid"> </a>
+        </div>
+        <div class="p-0 col-md-2 col-6">
+          <a href="stories.html">
+            <img src="https://images.pexels.com/photos/533733/pexels-photo-533733.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="img-fluid"> </a>
+        </div>
+        <div class="p-0 col-md-2 col-6">
+          <a href="stories.html">
+            <img src="https://images.pexels.com/photos/326583/pexels-photo-326583.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="img-fluid"> </a>
         </div>
       </div>
     </div>
@@ -75,13 +103,19 @@
           </form>
         </div>
         <div class="col-4 col-md-1 align-self-center">
-          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-center nav-item"></i></a>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fa fa-fw fa-facebook fa-3x text-center nav-item"></i>
+          </a>
         </div>
         <div class="col-4 col-md-1 align-self-center">
-          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x nav-item"></i></a>
+          <a href="https://twitter.com" target="_blank">
+            <i class="fa fa-fw fa-twitter fa-3x nav-item"></i>
+          </a>
         </div>
         <div class="col-4 col-md-1 align-self-center">
-          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram fa-3x nav-item"></i></a>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fa fa-fw fa-instagram fa-3x nav-item"></i>
+          </a>
         </div>
       </div>
       <div class="row">
@@ -96,17 +130,23 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">How to sign in </h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
         <div class="modal-body">
           <h3>OGEO is using Metamask</h3>
-          <p> You need metamask chrome extension in order to login </p>
-          <p><i class="fa fa-download fa-fw"></i> Download
-            <a href="#">Metamask plugin</a> from web store</p>
-          <p><i class="fa fa-user fa-fw"></i> Create an Ethereum Account using Metamask</p>
-          <p><i class="fa fa-key fa-fw"></i> Log in to Metamask with your Ethereum Account</p>
-          <p><i class="fa fa-info fa-fw"></i>
-            <a href="#" class="text-primary"> More information</a>
+          <p> You need metamask extension in order to login </p>
+          <p>
+            <i class="fa fa-download fa-fw"></i> Download
+            <a href="https://metamask.io/">Metamask plugin</a> for your browser</p>
+          <p>
+            <i class="fa fa-user fa-fw"></i> Create an Ethereum Wallet using Metamask</p>
+          <p>
+            <i class="fa fa-key fa-fw"></i> Log in to Metamask with your Ethereum Account</p>
+          <p>
+            <i class="fa fa-info fa-fw"></i>
+            <a href="about.html" class="text-primary"> More information</a>
           </p>
         </div>
         <div class="modal-footer">
@@ -119,4 +159,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
