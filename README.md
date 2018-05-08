@@ -47,7 +47,7 @@ EcommerceStore.deployed().then(function(i) {i.addProductToStore('Leather Bracele
 
 Check for item on blockchain
 ```language-javascript
-	EcommerceStore.deployed().then(function(f) {f.getProduct.call(1).then(function(f) {console.log(f)})})
+EcommerceStore.deployed().then(function(f) {f.getProduct.call(1).then(function(f) {console.log(f)})})
 ```
 ---
 Run application
